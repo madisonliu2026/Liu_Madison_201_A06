@@ -48,7 +48,7 @@ To get full credit for this Question you must:
 
 ## Github Repo Link
 
-[https://your-github-repo-url](https://your-github-repo-url)
+[https://github.com/madisonliu2026/Liu_Madison_201_A06](https://github.com/madisonliu2026/Liu_Madison_201_A06)
 
 :::
 
@@ -56,7 +56,7 @@ To get full credit for this Question you must:
 
 ## Screenshot/image of RStudio
 
-![](filepath.png)
+![](Github_setup.PNG)
 
 :::
 
@@ -188,55 +188,4 @@ max_temps <- read_tsv("state_max_temps.tsv") |>
 Calculate the average temperature for each month across the whole data frame (using the data for all three states together).
 
 ```{r}
-
 ```
-
-
-### Part b (2 points)
-
-Create three new data frames by slicing the data by state.
-
-- Slice the data frame to only include the state of Colorado (CO).
-- Slice the data frame to only include the state of Ohio (OH).
-- Slice the data frame to only include the state of Virginia (VA).
-
-No need to print any output here.
-
-```{r}
-
-```
-
-
-### Part c (5 points)
-
-Calculate the **median annual** temperature for your Colorado data set. 
-
-Use the `which.max()` and `which.min()` function to determine which year had the highest median temperature and which year had the lowest median temperature.
-
-Then print the sentence:
-
-"The maximum median annual temperature of {} occurred in {} and the minimum median annual temperature of {} occurred in {}."
-
-Example (this is NOT the answer just an example of what goes in the {}):
-
-"The maximum median annual temperature of 68.25 occurred in 2017 and the minimum median annual temperature of 57.15 occurred in 1907."
-
-Note: This code should still run successfully even if the numbers were to change.
-
-```{r}
-
-```
-
-
-## Question 5 (5 points)
-
-Write a recursive function that calculates the sum of the digits in a number. 
-
-Example: The number 312 would return 6 (3 + 1 + 2)
-
-Run your function with 935068.
-
-```{r}
-
-```
-
