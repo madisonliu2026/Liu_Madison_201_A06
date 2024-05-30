@@ -1,7 +1,11 @@
 ---
 title: "Assignment 6"
 subtitle: "STAT 201"
+<<<<<<< HEAD
 author: "Madison Liu"
+=======
+author: "YOUR NAME"
+>>>>>>> 321e53712412553e74ccd920f8cb1ecd0cdfbc43
 
 format:
   html:
@@ -102,9 +106,13 @@ Extract the value `8162` (LeBron James points) in 2 different ways:
 - using names
 
 ```{r}
+<<<<<<< HEAD
 # using indexing
 player_info[[2]][[4]]
 player_info$LJ$points
+=======
+
+>>>>>>> 321e53712412553e74ccd920f8cb1ecd0cdfbc43
 ```
 
 
@@ -115,6 +123,7 @@ Add a new named element to the end of each player's list called `height`. The he
 Print the `player_info` list to prove you were successful.
 
 ```{r}
+<<<<<<< HEAD
 player_info$MJ$height = 78
 player_info$LJ$height = 81
 player_info$KB$height = 78
@@ -122,6 +131,9 @@ player_info$KA$height = 86
 player_info$SO$height = 85
 
 player_info
+=======
+
+>>>>>>> 321e53712412553e74ccd920f8cb1ecd0cdfbc43
 ```
 
 
@@ -140,6 +152,7 @@ Hint: initialize an empty list
 Note: this must still run correctly even if the values were to change or if another player were added to the list or if the player order changed.
 
 ```{r}
+<<<<<<< HEAD
 ppg = list()
 for (player in names(player_info)){ #names() function
   pts = player_info[[player]]$points #index into player_info (b/c outer list isn't named), then index inner list by names
@@ -148,6 +161,9 @@ for (player in names(player_info)){ #names() function
 }
 ppg
   
+=======
+
+>>>>>>> 321e53712412553e74ccd920f8cb1ecd0cdfbc43
 ```
 
 
@@ -158,8 +174,12 @@ Use the list created in Part c and an appropriate apply function to round each v
 Store the output as a vector and print the results.
 
 ```{r}
+<<<<<<< HEAD
 rounded_ppg = sapply(ppg, round, digits = 2)
 rounded_ppg
+=======
+
+>>>>>>> 321e53712412553e74ccd920f8cb1ecd0cdfbc43
 ```
 
 
@@ -180,6 +200,7 @@ ie: 91 rounds to 90; 173 rounds to 200; 1450 rounds to 1000
 Hint: use `MARGIN = 1:2` to apply the function to each value instead of only a row/col.
 
 ```{r}
+<<<<<<< HEAD
 rounding_fun = function(x){
   if (x<100){
     return(round(x, -1))
@@ -192,6 +213,9 @@ rounding_fun = function(x){
 
 rounded_mat_rand = apply(mat_rand, MARGIN = 1:2, function(x) rounding_fun(x))
 rounded_mat_rand
+=======
+
+>>>>>>> 321e53712412553e74ccd920f8cb1ecd0cdfbc43
 ```
 
 
@@ -213,6 +237,7 @@ max_temps <- read_tsv("state_max_temps.tsv") |>
 ### Part a (2 points)
 
 Calculate the average temperature for each month across the whole data frame (using the data for all three states together).
+<<<<<<< HEAD
 ```{r}
 avg_temp = apply(max_temps[-c(1,2)], 2, mean)
 avg_temp
@@ -266,4 +291,8 @@ Run your function with 935068.
 
 ```{r}
 
+=======
+
+```{r}
+>>>>>>> 321e53712412553e74ccd920f8cb1ecd0cdfbc43
 ```
