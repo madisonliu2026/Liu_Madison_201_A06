@@ -1,11 +1,7 @@
 ---
 title: "Assignment 6"
 subtitle: "STAT 201"
-<<<<<<< HEAD
 author: "Madison Liu"
-=======
-author: "YOUR NAME"
-
 
 format:
   html:
@@ -108,6 +104,8 @@ Extract the value `8162` (LeBron James points) in 2 different ways:
 ```{r}
 # using indexing
 player_info[[2]][[4]]
+
+#using names
 player_info$LJ$points
 
 ```
@@ -221,9 +219,9 @@ max_temps <- read_tsv("state_max_temps.tsv") |>
 ### Part a (2 points)
 
 Calculate the average temperature for each month across the whole data frame (using the data for all three states together).
-<<<<<<< HEAD
+
 ```{r}
-avg_temp = apply(max_temps[-c(1,2)], 2, mean)
+avg_temp = apply(max_temps[-c(1,2)], 2, mean) #first two columns are not temperature data
 avg_temp
 ```
 ### Part b (2 points)
@@ -239,7 +237,6 @@ No need to print any output here.
 colorado_temps = max_temps[max_temps$state == "CO",]
 ohio_temps = max_temps[max_temps$state == "OH", ]
 virginia_temps = max_temps[max_temps$state == "VA", ]
-colorado_temps
 ```
 
 ### Part c (5 points)
@@ -280,5 +277,19 @@ Example: The number 312 would return 6 (3 + 1 + 2)
 Run your function with 935068.
 
 ```{r}
+summed_digits = function(x){
+  #base case is then x is one digit and them sum is just that number
+  if (x<10){
+    return(x)
+  }else{ #recurssive case is when x is more than 1 digit
+    last_digit = x %% 10
+    remaining_digits = x %/% 10
+    return(last_digit + summed_digits(remaining_digits))
+  }
+}
+
+result = summed_digits(935068)
+result
+
 ```
 
